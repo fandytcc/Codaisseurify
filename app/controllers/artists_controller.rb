@@ -7,8 +7,12 @@ class ArtistsController < ApplicationController
 
   def show; end
 
+  def new
+    @artist = Artist.new
+  end
+
   private
-  
+
   def set_artist
     @artist = Artist.find(params[:id])
   end
