@@ -21,9 +21,10 @@ artists = []
 end
 
 songs = []
-artists.sample(10).each do |artist|
-  songs << Song.create!(
+artists.sample(20).each do |artist|
+    songs << 10.times do Song.create!(
       title: Faker::Lorem.words(3).join(' '),
       artist: artist,
-  )
+    )
+  end
 end
