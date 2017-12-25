@@ -16,7 +16,7 @@ artists = []
   artists << Artist.create!(
       first_name: Faker::Name.first_name,
       last_name: Faker::Name.last_name,
-      bio: Faker::Hipster.paragraph[0..496] << "...",,
+      bio: Faker::Hipster.paragraph[0..496] << "...",
   )
 end
 
