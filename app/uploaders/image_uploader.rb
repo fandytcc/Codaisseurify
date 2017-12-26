@@ -3,7 +3,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   version :thumbnail do
     eager
-    resize_to_fit(400, 500)
+    resize_to_fit(400, 150)
     cloudinary_transformation :quality => 80
   end
 end
