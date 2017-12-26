@@ -34,17 +34,17 @@ artist_9 = Artist.create!(first_name: "Adele", last_name: "Laruie", bio: Faker::
 artist_10 = Artist.create!(first_name: "Ed", last_name: "Sheeran", bio: Faker::Hipster.paragraph[0..496] << "...")
 
 artists = [artist_1, artist_2, artist_3, artist_4, artist_5, artist_6, artist_7, artist_8, artist_9, artist_10]
-10.times do
-  artists << Artist.create!(
-      first_name: Faker::Name.first_name,
-      last_name: Faker::Name.last_name,
-      bio: Faker::Hipster.paragraph[0..496] << "...",
-  )
-end
+# 10.times do
+#   artists << Artist.create!(
+#       first_name: Faker::Name.first_name,
+#       last_name: Faker::Name.last_name,
+#       bio: Faker::Hipster.paragraph[0..496] << "...",
+#   )
+# end
 
 #songs
 songs = []
-artists.sample(20).each do |artist|
+artists.sample(10).each do |artist|
     songs << 10.times do Song.create!(
       title: Faker::Lorem.words(3).join(' '),
       artist: artist,
