@@ -1,11 +1,13 @@
 class ArtistsController < ApplicationController
-  before_action :set_artist, only: [:show, :destroy]
+  before_action :set_artist, only: [:show, :edit, :update, :destroy]
 
   def index
     @artists = Artist.all
   end
 
-  def show; end
+  def show
+    @photos = @artist.photos
+  end
 
   def new
     @artist = Artist.new
@@ -22,6 +24,22 @@ class ArtistsController < ApplicationController
       redirect_to @artist, notice: "Artist is successfully created"
     else
       render 'new'
+    end
+  end
+
+  def edit
+    @photos = @artist.photos
+  end
+
+  def update
+    if @artist.update(artist_params)
+      image_params.each do |image|
+        @artist.photos.create(image: image)
+      end
+
+      redirect_to edit_artist_path(@artist), notice: "Artist is successfully updated"
+    else
+      render 'edit'
     end
   end
 
