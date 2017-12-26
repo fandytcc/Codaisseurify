@@ -39,7 +39,7 @@ class ArtistsController < ApplicationController
 
       redirect_to edit_artist_path(@artist), notice: "Artist is successfully updated"
     else
-      render 'edit'
+      render :edit
     end
   end
 

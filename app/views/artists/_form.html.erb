@@ -29,6 +29,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "CREATE", class: "btn btn-info" %>
+    <%= f.submit (@artist.new_record? ? "CREATE" : "UPDATE"), class: "btn btn-info" %>
   </div>
 <% end %>

@@ -54,7 +54,7 @@ end
 
 # photos
 photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dp99fz03x/image/upload/v1514279984/john-legend_tud4rr.jpg", artist: artist_1)
-photo2 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dp99fz03x/image/upload/v1514279866/celebrity-of-the-week-music-superstar-lady-gaga-hollywood-celebrities-movie-stars-beverly-hills-magazine-1_tqzkcg.jpg", artist: artist_2)
+photo2 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dp99fz03x/image/upload/v1514305574/lady-gaga_bxcrvg.jpg", artist: artist_2)
 photo3 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dp99fz03x/image/upload/v1514279724/po63w2ye8k_rmnk5c.jpg", artist: artist_3 )
 
 photo4 = Photo.create!(remote_image_url: "http://res.cloudinary.com/dp99fz03x/image/upload/v1514279625/Gavin-James_urhae9.jpg", artist: artist_4 )
