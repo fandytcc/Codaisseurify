@@ -2,7 +2,10 @@
 <!-- artist's photo -->
   <div class="col-md-6 col-md-4">
     <div class="thumbnail">
-      <img src="https://picsum.photos/350/350/?random" alt="random image">
+      <!-- <img src="https://picsum.photos/350/350/?random" alt="random image"> -->
+      <% @artist.photos.each do |photo| %>
+        <%= image_tag photo.image %>
+      <% end %>
     </div>
   </div>
 
