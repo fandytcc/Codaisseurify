@@ -3,3 +3,9 @@
     <p class="alert alert-danger"><%= msg %></p>
   <% end %>
 <% end %>
+
+<% if @artist != nil %>
+  <% @artist.errors.full_messages.each do |msg| %>
+    <p class="alert alert-danger"><%= msg %></p>
+  <% end %>
+<% end %>
