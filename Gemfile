@@ -40,7 +40,6 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
   gem 'factory_bot_rails'
-  gem 'faker'
 end
 
 group :test do
@@ -73,3 +72,5 @@ gem 'carrierwave', '0.11.2'
 gem 'cloudinary', '1.2.3'
 
 gem 'rails_12factor', group: :production
+
+gem 'faker'
