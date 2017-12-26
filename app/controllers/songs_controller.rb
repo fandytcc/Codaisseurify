@@ -22,7 +22,7 @@ class SongsController < ApplicationController
 
   def destroy
     @song.destroy
-    redirect_to root_path
+    redirect_to root_path, notice: "Song is successfully removed"
   end
 
   private

@@ -30,5 +30,6 @@
 </div>
   <hr/>
 
-<p> <%= link_to "+ CREATE NEW SONG", new_song_path, class: "btn btn-info" %>
+<p><%= link_to "+ ADD NEW SONG", new_song_path, class: "btn btn-info" %>
+<%= link_to "DELETE THIS ARTIST", artist_path(@artist.id), class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %></p>
 <%= link_to "BACK", artists_path, class: "btn btn-default"%></p>
