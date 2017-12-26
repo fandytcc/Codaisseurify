@@ -18,7 +18,8 @@
       <% if @artist.songs.any? %>
         <ul>
           <% @artist.songs.each do |song| %>
-            <li><%= song.title %></li>
+            <li><%= song.title %>
+            <%= link_to "[Delete]", song_path(song.id), method: :delete, data: { confirm: "Are you sure?" } %></li>
           <% end %>
         </ul>
       <% else %>
